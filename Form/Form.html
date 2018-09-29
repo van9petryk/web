@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title> Зворотній зв'язок </title>
+		<link href = "form.css" rel = "stylesheet">
+	</head>
+	<body>
+		<h2>Зворотній зв'язок</h2>
+		<form action = "main.php" name = "feedback" onsubmit = "return validate(this)">
+			<fieldset>
+			<div class = "record">
+				<div class = "lbl">Ім'я</div>
+				<div class = "field">
+					<input type = "text" name = "name" placeholder = "Мар'ян" maxlength = "20" onblur = "v_name(this)">
+				</div>
+			</div>
+			<div class = "record">
+				<div class = "lbl">Прізвище</div>
+				<div class = "field">
+					<input type = "text" name = "surname" placeholder = "Кос" maxlength = "20" onblur = "v_name(this)">
+				</div>
+			</div>
+			<div class = "record">
+				<div class = "lbl">E-mail</div>
+				<div class = "field">
+					<input type = "text" name = "email" placeholder = "marian-kos@gmail.com" maxlength = "20" onblur = "v_email(this)">
+				</div>
+			</div>
+			<div class = "record">
+				<div class = "lbl">Номер тел.</div>
+				<div class = "field">
+					<input type = "text" name = "phone" placeholder = "+380950254982" maxlength = "13" onblur = "v_phone(this)">
+				</div>
+			</div>
+			<div class = "record">
+				<div class = "lbl">Вік</div>
+				<div class = "field">
+					<input type = "text" name = "age" placeholder = "27" maxlength = "2" onblur = "v_age(this)">
+				</div>
+			</div>
+			<div class = "record">
+				<div class = "lbl">Стать</div>
+				<div class = "field" onchange = "v_sex(feedback.sex)">
+					<label><input type = "radio" name = "sex" value = "male"/> Чоловік</label>
+					<label><input type = "radio" name = "sex" value = "female"/> Жінка</label>
+				</div>
+			</div>
+			<div class = "record">
+				<div class = "lbl">Ваш оператор</div>
+				<div class = "field">
+					<select name = "oper" onchange = "v_oper(this)">
+						<option value = "null">Виберіть оператора</option>
+						<option value = "mts">МТС</option>
+						<option value = "kyivstar">Київстар</option>
+						<option value = "life">Life:)</option>
+					</select>
+				</div>
+			</div>
+			<div class = "record">
+				<div class = "lbl">Улюблені кольори</div>
+				<div class = "field">
+					<ul class = "fewElement" onchange = "v_color(feedback.color)">
+						<li><label><input type = "checkbox" name = "color" value = "green"/> Зелений</label></li>
+						<li><label><input type = "checkbox" name = "color" value = "red"/> Червоний</label></li>
+						<li><label><input type = "checkbox" name = "color" value = "black"/> Чорний</label></li>
+						<li><label><input type = "checkbox" name = "color" value = "white"/> Білий</label></li>
+						<li><label><input type = "checkbox" name = "color" value = "blue"/> Голубий</label></li>
+					</ul>
+				</div>
+			</div>
+			<div class = "record">
+				<div class = "lbl">Ваше повідомлення</div>
+			</div>
+			<div class = "record">
+				<div class = "field">
+						<textarea name = "msg" placeholder = "Текст..." maxlength = "700" onblur = "v_msg(this)"></textarea>
+				</div>
+			</div>
+			<div class = "record butBlock">
+				<input type = "reset" name = "reset" value = "Витерти все"/>
+				<input type = "submit" name = "submit" value = "Відправити"/>
+			</div>
+			</fieldset>
+		</form>
+		<script src = "javascript.js"></script>
+	</body>
+</html>

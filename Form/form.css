@@ -1,0 +1,55 @@
+h2 {
+	text-align:center;
+	font-family:cursive;
+}
+form {
+	width:410px;
+	margin: 0 auto;
+	font-family:cursive;
+}
+.record {
+	margin:15px 0;
+}
+.lbl {
+	width:160px;
+	display:inline-block;
+	padding-right:10px;
+	text-align:right;
+	vertical-align:top;
+}
+.field {
+	display:inline-block;
+}
+.fewElement {
+	display:inline-block;
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+input {
+	border:1px solid gray;
+	font-family:cursive;
+	
+}
+.record textarea {
+	max-width:400px;
+	max-height:410px;
+	width:378px;
+	height:220px;
+}
+.butBlock {
+	text-align:right;
+}
+.hide {
+	visibility:hidden;
+}
+.error input, .error textarea {
+    border: 1px solid red;
+}
+.error-message {
+	font:italic 11px sans-serif;
+	color:red;
+}
+fieldset {
+	background-color:#F8F8F8;
+}
